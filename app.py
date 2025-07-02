@@ -35,17 +35,17 @@ def load_model():
 # Load model
 model, vectorizer = load_model()
 
-# UI
-
-# 🧽 Hide header, footer, and top controls
+# 🧽 Hide Streamlit Cloud header, footer, and top-right icons
 hide_streamlit_ui = """
     <style>
     header {visibility: hidden;}
     footer {visibility: hidden;}
-    .css-15zrgzn {display: none;}
+    .css-15zrgzn {display: none;} /* Top-right toolbar (Share, GitHub, etc.) */
     </style>
 """
 st.markdown(hide_streamlit_ui, unsafe_allow_html=True)
+
+# UI
 st.title("📧 Spam Email Classifier")
 st.write("Paste your email content below and click **Classify**.")
 
