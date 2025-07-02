@@ -36,6 +36,16 @@ def load_model():
 model, vectorizer = load_model()
 
 # UI
+
+# 🧽 Hide header, footer, and top controls
+hide_streamlit_ui = """
+    <style>
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    .css-15zrgzn {display: none;}
+    </style>
+"""
+st.markdown(hide_streamlit_ui, unsafe_allow_html=True)
 st.title("📧 Spam Email Classifier")
 st.write("Paste your email content below and click **Classify**.")
 
